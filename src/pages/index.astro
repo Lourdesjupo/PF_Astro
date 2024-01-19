@@ -39,25 +39,26 @@ import Footer from "../components/Footer.astro";
 >
   <main class="px-9">
     <section
-      class="flex flex-row justify-content align-full mx-auto lg:w-[850px] mt-28 mb-6 pb-20"
+      class="mb-14"
     >
+    <!-- flex flex-column justify-content align-full mx-auto lg:w-[850px] mt-28 mb-6 pb-20 -->
       <img
-        class="h-80 opacity-80 basis-1/4 mr-7"
+        class="w-30 h-30 sm:h-40 sm:w-40 lg:h-80 lg:w-80 opacity-80 basis-1/4 mr-7"
         src="./programming.png"
         alt="women in tech"
       />
       <div class="flex flex-col self-center">
         <h1
-          class="text-gray-900 dark:text-white md:text-3xl lg:text-4xl tracking-wide text-3xl font-bold  pb-3 pr-3"
+          class="text-gray-900 md:text-3xl lg:text-4xl tracking-wide text-3xl font-bold  pb-3 pr-3"
         >
-          <div class="flex justify-center align-middle flex-row gap-x-4">
+          <div class=" flex flex-col sm:flex-row sm:justify-center ">
             Desarrolladora web
             <a
               href="https://www.linkedin.com/in/lourdes-juárez-porto-984392129/"
               target="_blank"
               rel="noopener"
             >
-              <Badge class="mb-10">Open to work</Badge>
+              <Badge>Open to work</Badge>
             </a>
           </div>
         </h1>
@@ -68,7 +69,7 @@ import Footer from "../components/Footer.astro";
             >Echa un vistazo a mi currículum.</span
           >
         </h2>
-        <nav class="flex gap-x-7">
+        <nav class="flex gap-x-5 sm:gap-x-7">
           <SocialMedia
             href="https://www.linkedin.com/in/lourdes-juárez-porto-984392129/"
           >
@@ -98,7 +99,7 @@ import Footer from "../components/Footer.astro";
         Aquí puedes ver mis trabajos más recientes, incluyendo aquellos en los que continuo trabajando.
       </p>
       <Projects />
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center mt-24 animate-fade-right animate-once animate-duration-2000 animate-delay-0 animate-ease-linear animate-normal animate-fill-both">
+      <h2 class="text-3xl font-semibold  flex gap-x-3 items-center mt-14 sm:mt-24 animate-fade-right animate-once animate-duration-2000 animate-delay-0 animate-ease-linear animate-normal animate-fill-both">
         <CodeIcon class="size-7" />
          Proyectos académicos
       </h2>
@@ -128,9 +129,9 @@ import Footer from "../components/Footer.astro";
             Programación
           </h5>
           <div
-            class="font-normal text-gray-700 dark:text-gray-400 grid grid-cols-10  gap-3"
+            class="font-normal text-gray-700 dark:text-gray-400 grid grid-cols-5 sm:grid-cols-10 gap-3"
           >
-            <IconAnimation desc="HTML5"><HtmlIcon /></IconAnimation>
+            <IconAnimation desc="HTML5"><HtmlIcon class="w-28"/></IconAnimation>
             <IconAnimation desc="CSS3"><CssIcon /></IconAnimation>
             <IconAnimation desc="Sass"><SassIcon /></IconAnimation>
             <IconAnimation desc="JavaScript"><JavaScriptIcon /></IconAnimation>
@@ -148,7 +149,7 @@ import Footer from "../components/Footer.astro";
           >
             Tooling
           </h5>
-          <div class="font-normal text-gray-700 dark:text-gray-400 grid grid-cols-5 max-w-72 gap-4">            
+          <div class="font-normal text-gray-700 dark:text-gray-400 grid grid-cols-2 sm:grid-cols-5 sm:max-w-78 gap-4">            
             <IconAnimation desc="Vite">
               <ViteIcon />
            </IconAnimation>
@@ -159,7 +160,7 @@ import Footer from "../components/Footer.astro";
               <GitIcon />
            </IconAnimation>
             <IconAnimation desc="GitHub">
-              <Github class="size-8"/>
+              <Github class="size-7"/>
            </IconAnimation>
           </div>
         </Knowledge>
@@ -167,9 +168,9 @@ import Footer from "../components/Footer.astro";
           <h5
             class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
           >
-            Actualmente estudiando...
+            Estudiando
           </h5>
-          <div class="font-normal text-gray-700 dark:text-gray-400 grid grid-cols-5 max-w-78 gap-3  ">
+          <div class="font-normal text-gray-700 dark:text-gray-400 grid grid-cols-2 sm:grid-cols-5  sm:max-w-78 gap-4 ">
               <IconAnimation desc="Typescript">
                  <TypescriptIcon/>
               </IconAnimation>
@@ -177,8 +178,7 @@ import Footer from "../components/Footer.astro";
                 <ReactIcon />
               </IconAnimation>
               <IconAnimation desc="Jest">
-                <JestIcon class="size-6"/>
-              </IconAnimation>
+                <JestIcon class="size-6"/>              </IconAnimation>
           </div>
         </Knowledge>
       </div>
@@ -198,4 +198,3 @@ import Footer from "../components/Footer.astro";
     </SectionContainer>
   </main>
   <Footer />
-</Layout>
