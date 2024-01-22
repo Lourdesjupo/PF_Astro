@@ -9,6 +9,6 @@ export default defineConfig({
   base:'/PF_Astro',
   outDir: 'docs',
   build: {
-    assets: 'public',
+    assets: 'assets',
   }
 });
