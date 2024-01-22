@@ -9,6 +9,7 @@ const PROJECTS =  [
     github: 'https://github.com/Lourdesjupo/Disney-Characters-Database',
     link: 'https://lourdesjupo.github.io/Disney-Characters-Database/',
   },
+  
   {
     img: './ChronoLogica.png',
     projectName: 'ChronoLogica',
@@ -53,13 +54,13 @@ const techColors = {
 {
     PROJECTS.map(({img, projectName, tech, description, github, link})=> (
         <article class=" flex flex-col bg-white border border-gray-200 rounded-lg shadow  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-5">
-            <img class="w-2/6" src={img} alt=`Captura de pantalla del proyecto ${description}`/>
+            <img class="hidden sm:w-2/6 " src={img} alt=`Captura de pantalla del proyecto ${description}`/>
             <div class="flex flex-col justify-between flex-wrap p-4 leading-normal">
                 <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{projectName}</h3>
                 <p>{description}</p>
-                <ul class=" flex flex-row">
+                <ul class=" flex flex-row flex-wrap gap-y-3">
                     {tech.map (tech =>(
-                        <li class={`${techColors[tech]} text-xs font-medium me-2 px-2.5 py-0.5 rounded-full  `}>{tech}</li>
+                        <li class={`${techColors[tech]} text-xs font-medium me-2 px-2.5 py-0.5 rounded-full `}>{tech}</li>
                     ))
                     }
                 </ul>
