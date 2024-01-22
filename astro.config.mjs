@@ -6,5 +6,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site:'https://lourdesjupo.github.io/',
-  base:'/PF_Astro/'
+  base:'/PF_Astro',
+  outDir: 'docs'
 });
