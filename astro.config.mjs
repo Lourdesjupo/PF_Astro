@@ -7,5 +7,8 @@ export default defineConfig({
   integrations: [tailwind()],
   site:'https://lourdesjupo.github.io/',
   base:'/PF_Astro',
-  outDir: 'docs'
+  outDir: 'docs',
+  build: {
+    assets: 'public',
+  }
 });
